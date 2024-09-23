@@ -1,0 +1,567 @@
+/* Importing Bricolage and Inter */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://use.typekit.net/nah2whm.css");
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-weight: 550;
+
+    color: #1c1c1c;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 4px 24px;
+}
+
+.logoBox {
+    width: 130px;
+}
+
+.logo {
+    width: 100%
+}
+
+.navList {
+    display: flex;
+    gap: 5px;
+}
+
+.navItem {
+    padding: 14px 18px;
+    margin: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1c1c1c;
+    font-weight: 700;
+
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.navItem:hover {
+    font-weight: 600;
+
+    background-color: #F6F6F6;
+}
+
+.navItem li {
+    list-style: none;
+}
+
+/* Hero Section Css */
+.hero {
+    width: auto;
+
+    height: auto;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+
+    margin: 20px 0 0 0;
+    padding: 0px 24px 0px 24px;
+
+    position: relative;
+}
+
+.introDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.introLine {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.introLine span {
+    background: #53CCA0;
+    font-weight: 700;
+    line-height: normal;
+
+    padding: 5px;
+}
+
+.profession {
+    font-size: 80px;
+    font-weight: 800;
+
+}
+
+.professionAssist {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.myImgDiv {
+    height: 70%;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.lottie-animation {
+    position: absolute;
+    /* Keeps it fixed relative to the viewport */
+    bottom: 10px;
+    /* 10px from the bottom */
+    right: 10px;
+    /* 10px from the right */
+    width: 100px;
+    /* Adjust the width as needed */
+    height: 255px;
+    /* Adjust the height as needed */
+    z-index: 1000;
+    /* Ensures it appears above other content */
+}
+
+
+
+/* Project Css */
+.projects {
+    background: #F6F6F6;
+    overflow: hidden;
+    padding: 60px 24px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.projectsTitle,
+.projectShowcase {
+    width: 50%;
+}
+
+.projectsTitle p {
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-transform: capitalize;
+
+    width: 510px;
+}
+
+.projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.projectList:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.projectDetail {
+    padding: 20px;
+
+    position: relative;
+}
+
+.projectDetail h2 {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-transform: capitalize;
+
+    width: 280px
+}
+
+.projectDetail h3 {
+    color: #000;
+    opacity: 0.5;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.projectDetail h4 {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    color: #E2E2E2;
+    font-size: 128px;
+    font-weight: 800;
+    line-height: 90px;
+    text-transform: uppercase;
+}
+
+.projectThumbnail img {
+    height: 100%;
+    width: auto;
+}
+
+.order1 {
+    order: 1
+}
+
+.order2 {
+    order: 2
+}
+
+.projectThumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+/* About CSS */
+.whoSection {
+    padding: 60px 24px;
+    overflow: hidden;
+}
+
+.aboutLeft,
+.aboutRight {
+    width: 50%;
+}
+
+.aboutLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.who {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 10px;
+}
+
+.about {
+    display: flex;
+    gap: 24px;
+
+    padding-top: 14px;
+}
+
+.aboutLeft p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    width: 24px;
+    height: 44px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tSkillImg {
+    width: 44px;
+    height: 44px;
+}
+
+.tooltip {
+    width: 100px;
+
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #53CCA0;    
+    color: #1c1c1c;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #53CCA0;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+    top: -35px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.icon:hover span,
+.icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.aboutTitles {
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+    padding: 5px;
+    margin: 5px 0px 24px 0px;
+}
+
+.line1,
+.line2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.allJobs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.job {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jobTitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.year {
+    text-align: left;
+    font-weight: 500;
+}
+
+.org {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.org img {
+    width: 24px;
+    height: 24px;
+}
+
+.org a {
+    text-decoration: none;
+    color: #1c1c1cbd;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.org a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #1c1c1c;
+}
+
+.line2 p {
+    color: #1c1c1c9a;
+}
+
+/* contactContainer CSS */
+
+.contactContainer {
+    background: #F6F6F6;
+    overflow: hidden;
+    padding: 60px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reachMe {
+    font-family: "Bricolage Grotesque";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    text-align: center;
+
+    margin: 0 0 24px 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+    margin: 5px 0px 34px 0px;
+}
+
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact img {
+    width: 44px;
+    height: 44px;
+}
+
+.contact:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 2px 13px 34.8px -13px rgba(0, 0, 0, 0.35);
+}
+
+#email {
+    display: flex;
+    align-items: center;
+    gap: 8px;  
+}
+
+.contact a, #email {
+    text-decoration: none;
+    color: #1c1c1c;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 10px;
+}
+
+.copyTooltip {
+    padding: 14px;
+
+    box-shadow: 2px 13px 34.8px -5px rgba(0, 0, 0, 0.35);
+    background-color: #53CCA0;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+
+    text-align: center;
+    width: 240px;
+
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.tq img {
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+}
+
+/* Footer CSS */
+footer {
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Bricolage Grotesque";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding: 14px;
+}
+
+footer p span {
+    background: #53CCA0;
+    font-weight: 700;
+    line-height: normal;
+
+    padding: 0px 6px;
+}
