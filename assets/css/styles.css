@@ -27,6 +27,11 @@ h6 {
     font-family: "Bricolage Grotesque", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -106,7 +111,7 @@ header {
 }
 
 .introLine span {
-    background: #53CCA0;
+    background: #ffb703;
     font-weight: 700;
     line-height: normal;
 
@@ -330,7 +335,7 @@ header {
     position: absolute;
     top: 0;
     font-size: 14px;
-    background: #53CCA0;    
+    background: #ffb703;    
     color: #1c1c1c;
     text-align: center;
     padding: 5px 8px;
@@ -350,7 +355,7 @@ header {
     content: "";
     height: 8px;
     width: 8px;
-    background: #53CCA0;
+    background: #ffb703;
     bottom: -3px;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
@@ -521,7 +526,7 @@ header {
     padding: 14px;
 
     box-shadow: 2px 13px 34.8px -5px rgba(0, 0, 0, 0.35);
-    background-color: #53CCA0;
+    background-color: #ffb703;
     border-radius: 14px;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
@@ -559,7 +564,7 @@ footer {
 }
 
 footer p span {
-    background: #53CCA0;
+    background: #ffb703;
     font-weight: 700;
     line-height: normal;
 
