@@ -6,6 +6,11 @@
 * {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -38,6 +43,22 @@ header {
     justify-content: space-between;
 
     padding: 4px 24px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Ensures the nav stays on top */
+    background-color: #fff;
+    /* Set a background for the nav */
+    transition: box-shadow 0.3s ease;
+
+    border-bottom: #1c1c1c 2px solid;
+}
+
+header.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds subtle shadow */
+    border-bottom: none;
 }
 
 .logoBox {
@@ -61,6 +82,8 @@ header {
     color: #1c1c1c;
     font-weight: 700;
 
+    border: 2px solid #1c1c1c00;
+
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -69,9 +92,7 @@ header {
 }
 
 .navItem:hover {
-    font-weight: 600;
-
-    background-color: #F6F6F6;
+    border: 2px solid #1c1c1c;
 }
 
 .navItem li {
@@ -150,7 +171,8 @@ header {
     /* Adjust the width as needed */
     height: 255px;
     /* Adjust the height as needed */
-    z-index: 1000;
+
+    /* z-index: 1000; */
     /* Ensures it appears above other content */
 }
 
@@ -158,16 +180,188 @@ header {
 
 /* Project Css */
 .projects {
-    background: #F6F6F6;
+    background: #ffffff;
     overflow: hidden;
     padding: 60px 24px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 2px solid #1c1c1c;
+    border-bottom: 2px solid #1c1c1c;
 }
 
+.projects h2 {
+    font-family: "Bricolage Grotesque";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 
-.projectsTitle,
+    text-align: center;
+
+    margin: 0 0 24px 0;
+}
+
+.tabContainer {
+    display: flex;
+    gap: 5px;
+
+    padding: 5px;
+    margin-bottom: 24px;
+
+    border-radius: 41px;
+    background: #ffffff;
+    /* box-shadow: 0px 10px 23.7px -6px rgba(0, 0, 0, 0.17); */
+    /* border: 2px solid #1c1c1c10; */
+    border: 2px solid #1c1c1c;
+}
+
+.tab {
+    padding: 12px 18px;
+    font-weight: 700;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: #F6F6F6;
+    border: 2px solid #1c1c1c;
+}
+
+.cardDisplay {
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border: 2px solid #1c1c1c;
+    margin-bottom: 14px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.cardDisplay:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.projectDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 10px 0 0;
+}
+
+.projectHeading {
+    margin: 18px 0 0 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projectHeading h3 {
+    font-family: "Bricolage Grotesque";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+
+    margin-bottom: 5px;
+}
+
+.projectHeading p {
+    font-family: "Bricolage Grotesque";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-transform: capitalize;
+    color: #999999;
+
+}
+
+.projectCard .openIn {
+    display: block;
+    opacity: 0;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: #999999;
+
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+}
+
+.projectCard:hover .openIn {
+    opacity: 1;
+}
+
+.projectDetails {
+    margin: 0 0 18px 18px;
+
+    display: flex;
+    gap: 30px;
+}
+
+.projectDetailsHeading {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+}
+
+.projectDetailsContent {
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.projectThumbnailContainer {
+    /* border: #1c1c1c 1px solid; */
+    width: 375px;
+    height: 294px;
+}
+
+.projectThumbnailContainer img {
+    width: 375px;
+    height: 294px;
+}
+
+/* .projectsTitle,
 .projectShowcase {
     width: 50%;
 }
@@ -260,12 +454,16 @@ header {
 .projectThumbnail img {
     width: 100%;
     height: auto;
-}
+} */
+
+
 
 /* About CSS */
 .whoSection {
     padding: 60px 24px;
     overflow: hidden;
+
+    border-bottom: 2px solid #1c1c1c;
 }
 
 .aboutLeft,
@@ -277,6 +475,14 @@ header {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    padding-right: 14px;
+
+    border-right: #1c1c1c solid 2px;
+}
+
+.aboutRight {
+    padding-left: 14px;
 }
 
 .who {
@@ -286,11 +492,13 @@ header {
     line-height: normal;
 
     margin-bottom: 10px;
+
+    text-align: center;
 }
 
 .about {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
 
     padding-top: 14px;
 }
@@ -307,7 +515,7 @@ header {
 .wrapper {
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 36px;
 
     flex-wrap: wrap;
 }
@@ -335,7 +543,7 @@ header {
     position: absolute;
     top: 0;
     font-size: 14px;
-    background: #ffb703;    
+    background: #ffb703;
     color: #1c1c1c;
     text-align: center;
     padding: 5px 8px;
@@ -381,7 +589,7 @@ header {
     font-weight: 700;
     line-height: normal;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    border-bottom: 2px solid rgb(0, 0, 0);
 
     padding: 5px;
     margin: 5px 0px 24px 0px;
@@ -452,13 +660,15 @@ header {
 /* contactContainer CSS */
 
 .contactContainer {
-    background: #F6F6F6;
+    background: #ffffff;
     overflow: hidden;
-    padding: 60px 24px;
+    padding: 60px 24px 0px 24px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border-bottom: #1c1c1c 2px solid;
 }
 
 .reachMe {
@@ -492,6 +702,8 @@ header {
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    border: 2px solid #1c1c1c00;
 }
 
 .contact img {
@@ -502,16 +714,19 @@ header {
 .contact:hover {
     cursor: pointer;
     background-color: #ffffff;
-    box-shadow: 2px 13px 34.8px -13px rgba(0, 0, 0, 0.35);
+    /* box-shadow: 2px 13px 34.8px -13px rgba(0, 0, 0, 0.35); */
+
+    border: 2px solid #1c1c1c;
 }
 
 #email {
     display: flex;
     align-items: center;
-    gap: 8px;  
+    gap: 8px;
 }
 
-.contact a, #email {
+.contact a,
+#email {
     text-decoration: none;
     color: #1c1c1c;
 
