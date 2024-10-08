@@ -8,7 +8,7 @@ let titles = [
    "Spiderman fan",
    "UI/UX Designer",
    "Graphic Designer",
-    "Front-end",
+    "Front-end"
     
 ]
 
@@ -16,8 +16,7 @@ let titleAssist = [
     "since childhood",
     "by the day",
     "whenever the universe demands",
-    "rookie",
-    
+    "rookie"   
 ]
 
 function changeProfession() {
