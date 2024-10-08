@@ -8,7 +8,6 @@ let titles = [
     "UI/UX Designer",
     "Graphic Designer",
     "Front-end",
-    "Movie Buff",
     "Spiderman fan"
 ]
 
@@ -16,8 +15,7 @@ let titleAssist = [
     "by the day",
     "whenever the universe demands",
     "rookie",
-    "at any given time",
-    "since my childhood",
+    "since childhood",
 ]
 
 function changeProfession() {
@@ -29,6 +27,26 @@ function changeProfession() {
 }
 
 changeProfession();
+
+
+// Hero Section Image change
+const imgDiv = document.querySelector('.myImgDiv img');
+
+// Store your two image URLs for toggling
+const defaultImage = './assets/media/img/heroImg/Photo.png';
+const clickedImage = './assets/media/img/heroImg/Photo2.png';  // The new image after click
+
+imgDiv.addEventListener('click', () => {
+    imgDiv.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+    imgDiv.style.opacity = '0';  // Start fade-out animation
+
+    // Wait for the fade-out animation to complete before changing the image
+    setTimeout(() => {
+        imgDiv.src = imgDiv.src === defaultImage ? clickedImage : defaultImage;
+        imgDiv.style.opacity = '1';  // Fade in the new image
+    }, 500);  // This timing should match your CSS transition duration
+});
+
 
 
 
@@ -60,6 +78,7 @@ function copyToClipboard() {
     }, 2000);
 }
 
+
 // Function to add/remove shadow on scroll
 const header = document.querySelector('header');
 
@@ -70,6 +89,7 @@ window.addEventListener('scroll', function () {
         header.classList.remove('shadow'); // Remove shadow when at the top
     }
 });
+
 
 // Project filter
 let AllProject = document.querySelector('#All');

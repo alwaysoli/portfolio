@@ -128,7 +128,7 @@ header.shadow {
 .introLine {
     font-size: 26px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .introLine span {
@@ -150,6 +150,7 @@ header.shadow {
     font-weight: 400;
 }
 
+
 .myImgDiv {
     height: 70%;
     width: auto;
@@ -158,6 +159,23 @@ header.shadow {
     justify-content: center;
 
     overflow: hidden;
+
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.myImgDiv img.hoverImage {
+    opacity: 0;
+    transform: scale(1.1);  /* Slight zoom on hover */
+}
+
+.myImgDiv:hover img.hoverImage {
+    opacity: 1;  /* Show hover image */
+    transform: scale(1);  /* Reset scale on hover */
+}
+
+.myImgDiv:hover img.defaultImage {
+    opacity: 0;
+    transform: scale(0.9);  /* Shrink the original image */
 }
 
 .lottie-animation {
@@ -295,14 +313,14 @@ header.shadow {
     margin-bottom: 5px;
 }
 
-.projectHeading p {
+.projectYear {
     font-family: "Bricolage Grotesque";
-    font-size: 36px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 300;
     line-height: normal;
     text-transform: capitalize;
-    color: #999999;
+    opacity: 0.8;
 
 }
 
@@ -672,16 +690,27 @@ header.shadow {
 }
 
 .reachMe {
+    margin: 0 0 24px 0;
+
+    text-align: center;
+}
+
+
+.reachMe h2 {
     font-family: "Bricolage Grotesque";
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 
-    text-align: center;
-
-    margin: 0 0 24px 0;
+    margin-bottom: 5px;
 }
+    
+.reachMe p {
+    font-size: 20px;
+    opacity: 0.7;
+}
+    
 
 .links {
     display: flex;
@@ -734,7 +763,7 @@ header.shadow {
     align-items: center;
     gap: 8px;
 
-    padding: 10px 10px;
+    padding: 6px 6px;
 }
 
 .copyTooltip {
@@ -757,6 +786,8 @@ header.shadow {
     transform: translateX(-50%);
     z-index: 1000;
 }
+
+
 
 .tq img {
     width: 100%;
