@@ -5,17 +5,19 @@ let professionAssist = document.querySelector('#professionAssist')
 let currentIndex = 0;
 
 let titles = [
-    "UI/UX Designer",
-    "Graphic Designer",
+   "Spiderman fan",
+   "UI/UX Designer",
+   "Graphic Designer",
     "Front-end",
-    "Spiderman fan"
+    
 ]
 
 let titleAssist = [
+    "since childhood",
     "by the day",
     "whenever the universe demands",
     "rookie",
-    "since childhood",
+    
 ]
 
 function changeProfession() {
