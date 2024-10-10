@@ -104,10 +104,10 @@ let GDproject = document.querySelectorAll('.GDProject'); // GD projects
 let LiveProject = document.querySelectorAll('.LiveProject'); // Live projects
 
 function resetTabColor() {
-    AllProject.style.backgroundColor = '#ffffff';
-    GD.style.backgroundColor = '#ffffff';
-    UX.style.backgroundColor = '#ffffff';
-    Live.style.backgroundColor = '#ffffff';
+    AllProject.style.backgroundColor = '#f1f1ee';
+    GD.style.backgroundColor = '#f1f1ee';
+    UX.style.backgroundColor = '#f1f1ee';
+    Live.style.backgroundColor = '#f1f1ee';
     Live.style.color = '#1c1c1c'
 }
 
@@ -241,8 +241,8 @@ class TextScramble {
       for (let i = 0; i < length; i++) {
         const from = oldText[i] || ''
         const to = newText[i] || ''
-        const start = Math.floor(Math.random() * 40)
-        const end = start + Math.floor(Math.random() * 40)
+        const start = Math.floor(Math.random() * 20)
+        const end = start + Math.floor(Math.random() * 20)
         this.queue.push({ from, to, start, end })
       }
       cancelAnimationFrame(this.frameRequest)
