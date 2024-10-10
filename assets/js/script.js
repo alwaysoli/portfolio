@@ -98,9 +98,9 @@ let GD = document.querySelector('#GD');
 let UX = document.querySelector('#UX');
 let Live = document.querySelector('#Live');
 
-let AllCard = document.querySelectorAll('.cardDisplay'); // Select all project cards
+// let AllCard = document.querySelectorAll('.cardDisplay'); // Select all project cards
 let UXproject = document.querySelectorAll('.UXProject'); // UX projects
-let GDproject = document.querySelectorAll('.GDproject'); // GD projects
+let GDproject = document.querySelectorAll('.GDProject'); // GD projects
 let LiveProject = document.querySelectorAll('.LiveProject'); // Live projects
 
 function resetTabColor() {
@@ -112,7 +112,24 @@ function resetTabColor() {
 }
 
 // Function to show all projects
+function HideAll() {
+    GDproject.forEach(project => {
+        project.style.display = 'none'; // Show only GD projects
+    });
+
+    LiveProject.forEach(project => {
+        project.style.display = 'none'; // Show only Live projects
+    });
+
+
+    UXproject.forEach(project => {
+        project.style.display = 'none'; // Show only UX projects
+    });
+}
+
 function showAll() {
+    HideAll();
+
     GDproject.forEach(project => {
         project.style.display = 'flex'; // Show only GD projects
     });
@@ -126,13 +143,14 @@ function showAll() {
         project.style.display = 'flex'; // Show only UX projects
     });
 
-
     resetTabColor()
     AllProject.style.backgroundColor = '#FFB703'
 }
 
 // Function to show only UX projects
 function showUX() {
+    HideAll();
+
     GDproject.forEach(project => {
         project.style.display = 'none'; // Show only GD projects
     });
@@ -140,7 +158,6 @@ function showUX() {
     LiveProject.forEach(project => {
         project.style.display = 'none'; // Show only Live projects
     });
-
 
     UXproject.forEach(project => {
         project.style.display = 'flex'; // Show only UX projects
@@ -152,17 +169,18 @@ function showUX() {
 
 // Function to show only GD projects
 function showGD() {
+    HideAll();
+
+    GDproject.forEach(project => {
+        project.style.display = 'flex'; // Show only GD projects
+    });
+
     LiveProject.forEach(project => {
         project.style.display = 'none'; // Show only Live projects
     });
 
-
     UXproject.forEach(project => {
         project.style.display = 'none'; // Show only UX projects
-    });
-
-    GDproject.forEach(project => {
-        project.style.display = 'flex'; // Show only GD projects
     });
 
     resetTabColor()
@@ -171,16 +189,18 @@ function showGD() {
 
 // Function to show only Live projects
 function showLive() {
+    HideAll();
+
+    LiveProject.forEach(project => {
+        project.style.display = 'flex'; // Show only Live projects
+    });
+
     UXproject.forEach(project => {
         project.style.display = 'none'; // Show only UX projects
     });
 
     GDproject.forEach(project => {
         project.style.display = 'none'; // Show only GD projects
-    });
-
-    LiveProject.forEach(project => {
-        project.style.display = 'flex'; // Show only Live projects
     });
 
     resetTabColor()
@@ -209,7 +229,7 @@ showAll();
 class TextScramble {
     constructor(el) {
       this.el = el
-      this.chars = 'azhdskjfoewnl'
+      this.chars = 'aeioucdgihm'
       this.update = this.update.bind(this)
     }
   
@@ -267,14 +287,14 @@ class TextScramble {
   const professionPhrases = [
     'UI/UX Designer',
     'Graphic Designer',
-    'Front End',
+    'Web Developer',
     'Spiderman fan',
   ]
   
   const professionAssistPhrases = [
     'by the day',
     'whenever the universe demands',
-    'rookie',
+    '(still a rookie tho)',
     'since childhood',
   ]
   
@@ -292,7 +312,7 @@ class TextScramble {
   
     // Use Promise.all to wait for both animations to finish
     Promise.all([professionPromise, assistPromise]).then(() => {
-      setTimeout(next, 3000) // Delay before the next scramble
+      setTimeout(next, 2000) // Delay before the next scramble
     })
   
     counter = (counter + 1) % professionPhrases.length

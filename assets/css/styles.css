@@ -117,21 +117,18 @@ header.shadow {
 }
 
 /* Hero Section Css */
-.hero {
+.container {
     width: 100%;
     height: auto;
     overflow: hidden;
 
-   
-
-    text-align: center;
-
-    margin: 20px 0 0 0;
     padding: 0px 24px 0px 24px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border-bottom: 2px solid #1c1c1c;
 }
 
 .hero1400 {
@@ -141,6 +138,9 @@ header.shadow {
     align-items: center;
 
     position: relative;
+    margin: 20px 0 0 0; 
+
+    text-align: center;
 
     width: 1400px;
 }
@@ -210,15 +210,13 @@ header.shadow {
 /* Project Css */
 
 .projects {
-    background: #ffffff;
     overflow: hidden;
-    padding: 60px 24px;
+    
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-top: 2px solid #1c1c1c;
     border-bottom: 2px solid #1c1c1c;
 
     width: 100%;
@@ -226,6 +224,7 @@ header.shadow {
 
 .projects1400 {
     width: 1400px;
+    padding: 60px 24px;
 
     display: flex;
     flex-direction: column;
@@ -233,7 +232,7 @@ header.shadow {
     justify-content: center;
 }
 
-.projects h2 {
+.projects1400 h2 {
     font-family: "Bricolage Grotesque";
     font-size: 40px;
     font-style: normal;
@@ -403,21 +402,10 @@ header.shadow {
 
 
 /* About CSS */
-.whoSection {
-    padding: 60px 24px;
-    overflow: hidden;
-
-    border-bottom: 2px solid #1c1c1c;
-
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .whoSection1400{
     width: 1400px;
+
+    padding: 60px 24px;
 }
 
 .aboutLeft,
@@ -612,27 +600,13 @@ header.shadow {
 }
 
 /* contactContainer CSS */
-
-.contactContainer {
-    background: #ffffff;
-    overflow: hidden;
-    padding: 60px 24px 0px 24px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border-bottom: #1c1c1c 2px solid;
-
-    width: 100%;
-}
-
 .contact1400 {
     width: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 60px 0 0 0;
 }
 
 .reachMe {
