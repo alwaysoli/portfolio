@@ -1,33 +1,33 @@
 // JS for Profession 
 
-let profession = document.querySelector('#profession')
-let professionAssist = document.querySelector('#professionAssist')
-let currentIndex = 0;
+// let profession = document.querySelector('#profession')
+// let professionAssist = document.querySelector('#professionAssist')
+// let currentIndex = 0;
 
-let titles = [
-   "Spiderman fan",
-   "UI/UX Designer",
-   "Graphic Designer",
-    "Front-end"
-    
-]
+// let titles = [
+//     "Spiderman fan",
+//     "UI/UX Designer",
+//     "Graphic Designer",
+//     "Front-end"
 
-let titleAssist = [
-    "since childhood",
-    "by the day",
-    "whenever the universe demands",
-    "rookie"   
-]
+// ]
 
-function changeProfession() {
-    currentIndex = (currentIndex + 1) % titles.length;
-    profession.textContent = titles[currentIndex];
-    professionAssist.textContent = titleAssist[currentIndex];
+// let titleAssist = [
+//     "since childhood",
+//     "by the day",
+//     "whenever the universe demands",
+//     "rookie"
+// ]
 
-    setTimeout(changeProfession, 2000);
-}
+// function changeProfession() {
+//     currentIndex = (currentIndex + 1) % titles.length;
+//     profession.textContent = titles[currentIndex];
+//     professionAssist.textContent = titleAssist[currentIndex];
 
-changeProfession();
+//     setTimeout(changeProfession, 2000);
+// }
+
+// changeProfession();
 
 
 // Hero Section Image change
@@ -113,9 +113,19 @@ function resetTabColor() {
 
 // Function to show all projects
 function showAll() {
-    AllCard.forEach(project => {
-        project.style.display = 'flex'; // Ensure that display is set to 'flex' to maintain layout
+    GDproject.forEach(project => {
+        project.style.display = 'flex'; // Show only GD projects
     });
+
+    LiveProject.forEach(project => {
+        project.style.display = 'flex'; // Show only Live projects
+    });
+
+
+    UXproject.forEach(project => {
+        project.style.display = 'flex'; // Show only UX projects
+    });
+
 
     resetTabColor()
     AllProject.style.backgroundColor = '#FFB703'
@@ -130,7 +140,7 @@ function showUX() {
     LiveProject.forEach(project => {
         project.style.display = 'none'; // Show only Live projects
     });
-    
+
 
     UXproject.forEach(project => {
         project.style.display = 'flex'; // Show only UX projects
@@ -142,8 +152,13 @@ function showUX() {
 
 // Function to show only GD projects
 function showGD() {
-    AllCard.forEach(project => {
-        project.style.display = 'none'; // Hide all projects
+    LiveProject.forEach(project => {
+        project.style.display = 'none'; // Show only Live projects
+    });
+
+
+    UXproject.forEach(project => {
+        project.style.display = 'none'; // Show only UX projects
     });
 
     GDproject.forEach(project => {
@@ -156,8 +171,12 @@ function showGD() {
 
 // Function to show only Live projects
 function showLive() {
-    AllCard.forEach(project => {
-        project.style.display = 'none'; // Hide all projects
+    UXproject.forEach(project => {
+        project.style.display = 'none'; // Show only UX projects
+    });
+
+    GDproject.forEach(project => {
+        project.style.display = 'none'; // Show only GD projects
     });
 
     LiveProject.forEach(project => {
@@ -177,3 +196,109 @@ Live.addEventListener('click', showLive);
 
 // Initialize with all projects visible
 showAll();
+
+
+
+
+
+
+// ===================================================
+//New Code for Profession change
+// Code credits - https://codepen.io/soulwire
+
+class TextScramble {
+    constructor(el) {
+      this.el = el
+      this.chars = 'azhdskjfoewnl'
+      this.update = this.update.bind(this)
+    }
+  
+    setText(newText) {
+      const oldText = this.el.innerText
+      const length = Math.max(oldText.length, newText.length)
+      const promise = new Promise((resolve) => (this.resolve = resolve))
+      this.queue = []
+      for (let i = 0; i < length; i++) {
+        const from = oldText[i] || ''
+        const to = newText[i] || ''
+        const start = Math.floor(Math.random() * 40)
+        const end = start + Math.floor(Math.random() * 40)
+        this.queue.push({ from, to, start, end })
+      }
+      cancelAnimationFrame(this.frameRequest)
+      this.frame = 0
+      this.update()
+      return promise
+    }
+  
+    update() {
+      let output = ''
+      let complete = 0
+      for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i]
+        if (this.frame >= end) {
+          complete++
+          output += to
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar()
+            this.queue[i].char = char
+          }
+          output += `<span class="dud">${char}</span>`
+        } else {
+          output += from
+        }
+      }
+      this.el.innerHTML = output
+      if (complete === this.queue.length) {
+        this.resolve()
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update)
+        this.frame++
+      }
+    }
+  
+    randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)]
+    }
+  }
+  
+  // Example
+  const professionPhrases = [
+    'UI/UX Designer',
+    'Graphic Designer',
+    'Front End',
+    'Spiderman fan',
+  ]
+  
+  const professionAssistPhrases = [
+    'by the day',
+    'whenever the universe demands',
+    'rookie',
+    'since childhood',
+  ]
+  
+  const professionEl = document.querySelector('.profession')
+  const professionAssistEl = document.querySelector('.professionAssist')
+  
+  const professionFx = new TextScramble(professionEl)
+  const professionAssistFx = new TextScramble(professionAssistEl)
+  
+  let counter = 0
+  const next = () => {
+    // Trigger both animations at the same time
+    const professionPromise = professionFx.setText(professionPhrases[counter])
+    const assistPromise = professionAssistFx.setText(professionAssistPhrases[counter])
+  
+    // Use Promise.all to wait for both animations to finish
+    Promise.all([professionPromise, assistPromise]).then(() => {
+      setTimeout(next, 3000) // Delay before the next scramble
+    })
+  
+    counter = (counter + 1) % professionPhrases.length
+  }
+  
+  next()
+  
+  
+

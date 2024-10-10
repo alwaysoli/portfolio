@@ -9,359 +9,302 @@
     <!-- Linking Lottie animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
 
+    <!-- Linking google icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
     <!-- linking CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+
 
 </head>
 
 <body>
 
     <header>
-        <div class="logoBox">
-            <a href="index.html">
-                <img class="logo" src="./assets/media/img/portfolio.png" alt="portfOLIo">
-            </a>
+        <div class="nav1400">
+            <div class="logoBox">
+                <a href="index.html">
+                    <img class="logo" src="./assets/media/img/portfolio.png" alt="portfOLIo">
+                </a>
+            </div>
+            <nav class="navBar">
+
+                <div class="menu">
+                    <span class="material-symbols-rounded">
+                        menu
+                    </span>
+                </div>
+
+                <ul class="navList">
+                    <a href="#projects" class="navItem">
+                        <li>Projects</li>
+                    </a>
+                    <a href="#whoSection" class="navItem">
+                        <li>About</li>
+                    </a>
+                    <a href="#contactContainer" class="navItem">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
         </div>
-        <nav class="navBar">
-            <ul class="navList">
-                <a href="#projects" class="navItem">
-                    <li>Projects</li>
-                </a>
-                <a href="#whoSection" class="navItem">
-                    <li>About</li>
-                </a>
-                <a href="#contactContainer" class="navItem">
-                    <li>Contact</li>
-                </a>
-            </ul>
-        </nav>
     </header>
 
     <!-- Hero section -->
     <section class="hero" id="#hero">
-        <div class="introDiv">
-            <div class="introLine">Hi there! <span>I'm Oli</span>,and I am a</div>
-            <h1 class="profession" id="profession"></h1>
-            <h2 class="professionAssist" id="professionAssist"></h2>
-        </div>
+        <div class="hero1400">
+            <div class="introDiv">
+                <div class="introLine">Hi there! <span>I'm Oli</span>,and I am a</div>
+                <h1 class="profession" id="profession"></h1>
+                <h2 class="professionAssist" id="professionAssist"></h2>
+            </div>
 
-        <div class="myImgDiv">
-            <img src="./assets/media/img/heroImg/Photo.png" alt="photo of Oli smiling">
-        </div>
+            <div class="myImgDiv">
+                <img src="./assets/media/img/heroImg/Photo.png" alt="photo of Oli smiling">
+            </div>
 
-        <iframe src="https://lottie.host/embed/f428add6-7f78-4108-9e4c-ca95c0158827/yKNi0qi5B4.json"
-            class="lottie-animation" frameborder="0">
-        </iframe>
+            <iframe src="https://lottie.host/embed/f428add6-7f78-4108-9e4c-ca95c0158827/yKNi0qi5B4.json"
+                class="lottie-animation" frameborder="0">
+            </iframe>
+        </div>
     </section>
 
-    <!-- Projects sections -->
-    <!-- <section class="projects" id="projects">
-        <div class="projectsTitle">
-            <p> How I spent my sleepless nights </p>
-        </div>
-        <div class="projectShowcase">
 
-            <a href="https://www.behance.net/gallery/166625385/Book-Renting-app-UX-project" target="_blank" id="UXproject"
-                rel="noopener noreferrer">
-                <article class="projectList">
-                    <div class="projectDetail">
-                        <h2>Book renting and purchasing app</h2>
-                        <h3>UX Case study</h3>
-                        <h4>1</h4>
-                    </div>
-                    <div class="projectThumbnail">
-                        <img src="./assets/media/img/thumbnails/Thumbnail01.jpg"
-                            alt="Thumbnail of Book renting and purchasing app">
-                    </div>
-                </article>
-            </a>
-
-            <a href="https://www.behance.net/gallery/197876307/UX-Case-Study-App-for-International-students" target="_blank" rel="noopener noreferrer" id="UXproject">
-                <article class="projectList">
-                    <div class="projectDetail order2">
-                        <h2>International Humber college students</h2>
-                        <h3>UX Case study</h3>
-                        <h4>2</h4>
-                    </div>
-                    <div class="projectThumbnail order1">
-                        <img src="./assets/media/img/thumbnails/Thumbnail02.jpg"
-                            alt="Thumbnail of International Humber college students project">
-                    </div>
-                </article>
-            </a>
-
-            <a href="https://www.behance.net/gallery/177139397/UI-Showcase-Second-Hand-book-purchasing-application" target="_blank" rel="noopener noreferrer" id="UXproject">
-                <article class="projectList">
-                    <div class="projectDetail">
-                        <h2>Book renting and purchasing app</h2>
-                        <h3>UI showcase</h3>
-                        <h4>3</h4>
-                    </div>
-                    <div class="projectThumbnail">
-                        <img src="./assets/media/img/thumbnails/Thumbnail03.jpg" alt="">
-                    </div>
-                </article>
-            </a>
-
-            <a href="https://www.behance.net/gallery/177139397/UI-Showcase-Second-Hand-book-purchasing-application" target="_blank" rel="noopener noreferrer" id="GDproject">
-                <article class="projectList">
-                    <div class="projectDetail order2">
-                        <h2>Walk For Reconciliation</h2>
-                        <h3>Graphic Design</h3>
-                        <h4>4</h4>
-                    </div>
-                    <div class="projectThumbnail order1">
-                        <img src="./assets/media/img/thumbnails/Thumbnail04.jpg" alt="">
-                    </div>
-                </article>
-            </a>
-
-            <a href="https://www.behance.net/gallery/177139397/UI-Showcase-Second-Hand-book-purchasing-application" target="_blank" rel="noopener noreferrer">
-                <article class="projectList">
-                    <div class="projectDetail">
-                        <h2>Nuit Blanche</h2>
-                        <h3>Graphic Design</h3>
-                        <h4>5</h4>
-                    </div>
-                    <div class="projectThumbnail">
-                        <img src="./assets/media/img/thumbnails/Thumbnail05.jpg" alt="">
-                    </div>
-                </article>
-            </a>
-        </div>
-    </section> -->
     <section class="projects" id="projects">
+        <div class="projects1400">
+            <h2>Stories of My Sleepless Nights</h2>
 
-        <h2>Stories of My Sleepless Nights</h2>
+            <div class="tabContainer">
+                <div class="tab" id="All">All Projects</div>
+                <div class="tab" id="UX">UI/UX</div>
+                <div class="tab" id="GD">Graphic Design</div>
+                <div class="tab" id="Live">Live Projects</div>
+            </div>
 
-        <div class="tabContainer">
-            <div class="tab" id="All">All Projects</div>
-            <div class="tab" id="UX">UI/UX</div>
-            <div class="tab" id="GD">Graphic Design</div>
-            <div class="tab" id="Live">Live Projects</div>
-        </div>
+            <!-- Project card list starts here -->
+            <div class="projectList">
 
-        <!-- Project card list starts here -->
-        <div class="projectList">
+                <!-- Book Renting UX -->
+                <a href="https://www.behance.net/gallery/166625385/Book-Renting-app-UX-project" target="_blank"
+                    rel="noopener noreferrer" class="projectCard">
+                    <article class="UXProject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Book renting and purchasing app</h3>
+                                <p class="projectYear">2022</p>
+                                <p class="openIn">Open in Behance</p>
+                            </div>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">UX Case Study</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Personal Project</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/BookRentingUX.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Book Renting UX -->
-            <a href="https://www.behance.net/gallery/166625385/Book-Renting-app-UX-project" target="_blank"
-                rel="noopener noreferrer" class="projectCard">
-                <article class="UXProject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Book renting and purchasing app</h3>
-                            <p class="projectYear">2022</p>
-                            <p class="openIn">Open in Behance</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">UX Case Study</p>
+                <!-- Walk For Reconciliation -->
+                <a href="https://www.behance.net/gallery/206734577/Walk-For-Reconciliation-Graphic-Design"
+                    target="_blank" rel="noopener noreferrer" class="projectCard">
+                    <article class="GDproject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Walk For Reconciliation</h3>
+                                <p class="projectYear">2024</p>
+                                <p class="openIn">Open in Behance</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Personal Project</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">Graphic Design</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Professional/Official</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/BookRentingUX.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/WalkForReconciliationGD.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Walk For Reconciliation -->
-            <a href="https://www.behance.net/gallery/206734577/Walk-For-Reconciliation-Graphic-Design" target="_blank"
-                rel="noopener noreferrer" class="projectCard">
-                <article class="GDproject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Walk For Reconciliation</h3>
-                            <p class="projectYear">2024</p>
-                            <p class="openIn">Open in Behance</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">Graphic Design</p>
+                <!-- Humber College Case Study -->
+                <a href="https://www.behance.net/gallery/197876307/UX-Case-Study-App-for-International-students"
+                    target="_blank" rel="noopener noreferrer" class="projectCard">
+                    <article class="UXproject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Research on Improving International Student Experience</h3>
+                                <p class="projectYear">2024</p>
+                                <p class="openIn">Open in Behance</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Professional/Official</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">UX Case Study</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Academic</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/WalkForReconciliationGD.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/HumberCollegeUX.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Humber College Case Study -->
-            <a href="https://www.behance.net/gallery/197876307/UX-Case-Study-App-for-International-students"
-                target="_blank" rel="noopener noreferrer" class="projectCard">
-                <article class="UXproject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Research on Improving International Student Experience</h3>
-                            <p class="projectYear">2024</p>
-                            <p class="openIn">Open in Behance</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">UX Case Study</p>
+                <!-- Nuit Blanche -->
+                <a href="https://www.behance.net/gallery/194032197/Nuit-Blanche-2024-Poster-design-process"
+                    target="_blank" rel="noopener noreferrer" class="projectCard">
+                    <article class="GDproject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Nuit Blanche - Toronto</h3>
+                                <p class="projectYear">2024</p>
+                                <p class="openIn">Open in Behance</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Academic</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">Graphic Design</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Academic</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/HumberCollegeUX.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/NuitBlancheGD.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Nuit Blanche -->
-            <a href="https://www.behance.net/gallery/194032197/Nuit-Blanche-2024-Poster-design-process" target="_blank"
-                rel="noopener noreferrer" class="projectCard">
-                <article class="GDproject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Nuit Blanche - Toronto</h3>
-                            <p class="projectYear">2024</p>
-                            <p class="openIn">Open in Behance</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">Graphic Design</p>
+                <!-- Book Renting UI -->
+                <a href="https://www.behance.net/gallery/177139397/UI-Showcase-Second-Hand-book-purchasing-application"
+                    target="_blank" rel="noopener noreferrer" class="projectCard">
+                    <article class="UXproject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Book Renting app UI showcase</h3>
+                                <p class="projectYear">2024</p>
+                                <p class="openIn">Open in Behance</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Academic</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">UI Showcase</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Personal Project</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/NuitBlancheGD.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/BookRentingUI.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Book Renting UI -->
-            <a href="https://www.behance.net/gallery/177139397/UI-Showcase-Second-Hand-book-purchasing-application"
-                target="_blank" rel="noopener noreferrer" class="projectCard">
-                <article class="UXproject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Book Renting app UI showcase</h3>
-                            <p class="projectYear">2024</p>
-                            <p class="openIn">Open in Behance</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">UI Showcase</p>
+                <!-- Car Configurator -->
+                <a href="https://www.behance.net/gallery/209623711/Car-Configurator-UIUX-Project" target="_blank"
+                    rel="noopener noreferrer" class="projectCard">
+                    <article class="UXproject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>3D Car Configurator Case Study</h3>
+                                <p class="projectYear">2023</p>
+                                <p class="openIn">Open in Behance</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Personal Project</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">UI/UX</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Personal Project</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/BookRentingUI.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/CarConfiguratorUXUI.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Car Configurator -->
-            <a href="https://www.behance.net/gallery/209623711/Car-Configurator-UIUX-Project" target="_blank"
-                rel="noopener noreferrer" class="projectCard">
-                <article class="UXproject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>3D Car Configurator Case Study</h3>
-                            <p class="projectYear">2023</p>
-                            <p class="openIn">Open in Behance</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">UI/UX</p>
+                <!-- Nissan Configurator -->
+                <a href="https://configurator.nissan.in/features/#/configurator" target="_blank"
+                    rel="noopener noreferrer" class="projectCard">
+                    <article class="LiveProject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Nissan 3D Configurator</h3>
+                                <p class="projectYear">2022</p>
+                                <p class="openIn">Open link in new tab</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Personal Project</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">UI/UX</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Professional/Official</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/CarConfiguratorUXUI.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/NissanConfigurator.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Nissan Configurator -->
-            <a href="https://configurator.nissan.in/features/#/configurator" target="_blank" rel="noopener noreferrer"
-                class="projectCard">
-                <article class="LiveProject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Nissan 3D Configurator</h3>
-                            <p class="projectYear">2022</p>
-                            <p class="openIn">Open link in new tab</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">UI/UX</p>
+                <!-- Jeep Configurator -->
+                <a href="https://www.jeep-india.com/new-jeep-meridian/visualizer.html" target="_blank"
+                    rel="noopener noreferrer" class="projectCard">
+                    <article class="LiveProject cardDisplay">
+                        <div class="projectDetailsContainer">
+                            <div class="projectHeading">
+                                <h3>Jeep 3D Configurator</h3>
+                                <p class="projectYear">2022</p>
+                                <p class="openIn">Open link in new tab</p>
                             </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Professional/Official</p>
+                            <div class="projectDetails">
+                                <div>
+                                    <p class="projectDetailsHeading">Category</p>
+                                    <p class="projectDetailsContent">UI/UX</p>
+                                </div>
+                                <div>
+                                    <p class="projectDetailsHeading">Project Type</p>
+                                    <p class="projectDetailsContent">Professional/Official</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/NissanConfigurator.jpg" alt="">
-                    </div>
-                </article>
-            </a>
+                        <div class="projectThumbnailContainer">
+                            <img src="./assets/media/img/thumbnails/JeepConfigurator.jpg" alt="">
+                        </div>
+                    </article>
+                </a>
 
-            <!-- Jeep Configurator -->
-            <a href="https://www.jeep-india.com/new-jeep-meridian/visualizer.html" target="_blank" rel="noopener noreferrer"
-                class="projectCard">
-                <article class="LiveProject cardDisplay">
-                    <div class="projectDetailsContainer">
-                        <div class="projectHeading">
-                            <h3>Jeep 3D Configurator</h3>
-                            <p class="projectYear">2022</p>
-                            <p class="openIn">Open link in new tab</p>
-                        </div>
-                        <div class="projectDetails">
-                            <div>
-                                <p class="projectDetailsHeading">Category</p>
-                                <p class="projectDetailsContent">UI/UX</p>
-                            </div>
-                            <div>
-                                <p class="projectDetailsHeading">Project Type</p>
-                                <p class="projectDetailsContent">Professional/Official</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projectThumbnailContainer">
-                        <img src="./assets/media/img/thumbnails/JeepConfigurator.jpg" alt="">
-                    </div>
-                </article>
-            </a>
 
-           
-        </div>
+            </div> <!--ProjectList class ends here-->
+
+        </div> <!-- class project1400 ends here -->
 
     </section>
 
@@ -369,168 +312,174 @@
     <!-- Who is Oli -->
     <section class="whoSection" id="whoSection">
 
-        <h2 class="who">
-            Who is Oli?
-        </h2>
+        <div class="whoSection1400">
 
-        <div class="about">
-            <div class="aboutLeft">
-                <p>Hi there! I'm a UI/UX designer by profession but I also dabble into graphic designing whenever the universe demands it.
-                    Not
-                    to brag, but I'm also into motion design and have been diving into After Effects lately. With 3
-                    years of
-                    experience in the design industry, I'm excited to continue this journey and see where it takes me.
-                    Oh,
-                    and did I mention I know front-end development too? Anyway, it's great to meet you.
-                </p>
+            <h2 class="who">
+                Who is Oli?
+            </h2>
 
-                <div class="techSkills">
-                    <div class="aboutTitles">Technical Skills</div>
-
-                    <div class="wrapper">
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/Figma.png" alt="">
-                            <span class="tooltip">Figma</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/Photoshop.png" alt="">
-                            <span class="tooltip">Photoshop</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/Illustrator.png" alt="">
-                            <span class="tooltip">Illustrator</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/AfterEffect.png" alt="">
-                            <span class="tooltip">After Effect</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/PremierePro.png" alt="">
-                            <span class="tooltip">Premiere Pro</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/Framer.png" alt="">
-                            <span class="tooltip">Framer</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/HTML.png" alt="">
-                            <span class="tooltip">HTML</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/CSS.png" alt="">
-                            <span class="tooltip">CSS</span>
-                        </div>
-
-                        <div class="icon">
-                            <img class="tSkillImg" src="./assets/media/img/techSkills/JS.png" alt="">
-                            <span class="tooltip">Java Script</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="softSkills">
-                    <div class="aboutTitles">Soft Skills</div>
-                    <p>
-                        Problem Solving,
-                        Creative Thinking,
-                        Research and Interviewing Skills,
-                        User Testing,
-                        Creating & Maintaining Design System
+            <div class="about">
+                <div class="aboutLeft">
+                    <p>Hi there! I'm a UI/UX designer by profession but I also dabble into graphic designing whenever
+                        the
+                        universe demands it.
+                        Not
+                        to brag, but I'm also into motion design and have been diving into After Effects lately. With 3
+                        years of
+                        experience in the design industry, I'm excited to continue this journey and see where it takes
+                        me.
+                        Oh,
+                        and did I mention I know front-end development too? Anyway, it's great to meet you.
                     </p>
 
-                </div>
-            </div>
+                    <div class="techSkills">
+                        <div class="aboutTitles">Technical Skills</div>
 
+                        <div class="wrapper">
 
-            <div class="aboutRight">
-
-                <div class="aboutTitles">
-                    Work Experience
-                </div>
-
-                <div class="allJobs">
-
-                    <!-- Ingite -->
-                    <div class="job">
-                        <div class="line1">
-                            <p class="jobTitle">Graphic Designer</p>
-                            <p class="year">Currently Working</p>
-                        </div>
-                        <div class="line2">
-                            <div class="org">
-                                <img src="./assets/media/img/Others/OrgIcon.png" alt="">
-                                <a href="https://ignitestudentlife.com/" target="_blank"
-                                    rel="noopener noreferrer">Ignite -
-                                    Humber College</a>
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/Figma.png" alt="">
+                                <span class="tooltip">Figma</span>
                             </div>
-                            <p>May 2024 - Present</p>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/Photoshop.png" alt="">
+                                <span class="tooltip">Photoshop</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/Illustrator.png" alt="">
+                                <span class="tooltip">Illustrator</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/AfterEffect.png" alt="">
+                                <span class="tooltip">After Effect</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/PremierePro.png" alt="">
+                                <span class="tooltip">Premiere Pro</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/Framer.png" alt="">
+                                <span class="tooltip">Framer</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/HTML.png" alt="">
+                                <span class="tooltip">HTML</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/CSS.png" alt="">
+                                <span class="tooltip">CSS</span>
+                            </div>
+
+                            <div class="icon">
+                                <img class="tSkillImg" src="./assets/media/img/techSkills/JS.png" alt="">
+                                <span class="tooltip">Java Script</span>
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- Hofeto -->
-                    <div class="job">
-                        <div class="line1">
-                            <p class="jobTitle">UI/UX Intern</p>
-                            <p class="year">3 months (Part time Intern)</p>
-                        </div>
-                        <div class="line2">
-                            <div class="org">
-                                <img src="./assets/media/img/Others/OrgIcon.png" alt="">
-                                <a href="https://hofeto.com/" target="_blank" rel="noopener noreferrer">Hofeto Canada
-                                    (BidBlox)</a>
-                            </div>
-                            <p>June 2024 - Aug 2024</p>
-                        </div>
-                    </div>
+                    <div class="softSkills">
+                        <div class="aboutTitles">Soft Skills</div>
+                        <p>
+                            Problem Solving,
+                            Creative Thinking,
+                            Research and Interviewing Skills,
+                            User Testing,
+                            Creating & Maintaining Design System
+                        </p>
 
-                    <!-- BrickMMO -->
-                    <div class="job">
-                        <div class="line1">
-                            <p class="jobTitle">Graphic Designer</p>
-                            <p class="year">4 months (Contract/Part time)</p>
-                        </div>
-                        <div class="line2">
-                            <div class="org">
-                                <img src="./assets/media/img/Others/OrgIcon.png" alt="">
-                                <a href="https://brickmmo.com/" target="_blank" rel="noopener noreferrer">BrickMMO -
-                                    Humber College</a>
-                            </div>
-                            <p>Jan 2024 - April 2024</p>
-                        </div>
                     </div>
-
-                    <!-- Eccentric -->
-                    <div class="job">
-                        <div class="line1">
-                            <p class="jobTitle">UI/UX Designer</p>
-                            <p class="year">2 Years (Full-time)</p>
-                        </div>
-                        <div class="line2">
-                            <div class="org">
-                                <img src="./assets/media/img/Others/OrgIcon.png" alt="">
-                                <a href="https://weareeccentric.com/" target="_blank"
-                                    rel="noopener noreferrer">Eccentric</a>
-                            </div>
-                            <p>Jan 2022 - Dec 2023</p>
-                        </div>
-                    </div>
-
                 </div>
 
-            </div>
 
-        </div>
+                <div class="aboutRight">
 
+                    <div class="aboutTitles">
+                        Work Experience
+                    </div>
 
+                    <div class="allJobs">
+
+                        <!-- Ingite -->
+                        <div class="job">
+                            <div class="line1">
+                                <p class="jobTitle">Graphic Designer</p>
+                                <p class="year">Currently Working</p>
+                            </div>
+                            <div class="line2">
+                                <div class="org">
+                                    <img src="./assets/media/img/Others/OrgIcon.png" alt="">
+                                    <a href="https://ignitestudentlife.com/" target="_blank"
+                                        rel="noopener noreferrer">Ignite -
+                                        Humber College</a>
+                                </div>
+                                <p>May 2024 - Present</p>
+                            </div>
+                        </div>
+
+                        <!-- Hofeto -->
+                        <div class="job">
+                            <div class="line1">
+                                <p class="jobTitle">UI/UX Intern</p>
+                                <p class="year">3 months (Part time Intern)</p>
+                            </div>
+                            <div class="line2">
+                                <div class="org">
+                                    <img src="./assets/media/img/Others/OrgIcon.png" alt="">
+                                    <a href="https://hofeto.com/" target="_blank" rel="noopener noreferrer">Hofeto
+                                        Canada
+                                        (BidBlox)</a>
+                                </div>
+                                <p>June 2024 - Aug 2024</p>
+                            </div>
+                        </div>
+
+                        <!-- BrickMMO -->
+                        <div class="job">
+                            <div class="line1">
+                                <p class="jobTitle">Graphic Designer</p>
+                                <p class="year">4 months (Contract/Part time)</p>
+                            </div>
+                            <div class="line2">
+                                <div class="org">
+                                    <img src="./assets/media/img/Others/OrgIcon.png" alt="">
+                                    <a href="https://brickmmo.com/" target="_blank" rel="noopener noreferrer">BrickMMO -
+                                        Humber College</a>
+                                </div>
+                                <p>Jan 2024 - April 2024</p>
+                            </div>
+                        </div>
+
+                        <!-- Eccentric -->
+                        <div class="job">
+                            <div class="line1">
+                                <p class="jobTitle">UI/UX Designer</p>
+                                <p class="year">2 Years (Full-time)</p>
+                            </div>
+                            <div class="line2">
+                                <div class="org">
+                                    <img src="./assets/media/img/Others/OrgIcon.png" alt="">
+                                    <a href="https://weareeccentric.com/" target="_blank"
+                                        rel="noopener noreferrer">Eccentric</a>
+                                </div>
+                                <p>Jan 2022 - Dec 2023</p>
+                            </div>
+                        </div>
+
+                    </div>  <!--allJobs class ends here-->
+
+                </div> <!--aboutRight class ends here-->
+
+            </div>  <!--about class ends here-->
+
+        </div> <!--WhoSection1400 ends here-->
 
     </section>
 
@@ -538,45 +487,49 @@
 
     <section class="contactContainer" id="contactContainer">
 
-        <div class="reachMe">
-           <h2> I Might Be Introverted, But I Promise to Reply!</h2>
-            <p>We can connect at</p>
-        </div>
+        <div class="contact1400">
 
-        <div class="links">
-            <div class="contact">
-                <div id="email" onclick="copyToClipboard()">
-                    <img src="./assets/media/img/Footer/Mail.png" alt="Mail Icon">
-                    <p>alwaysoli07@gmail.com</p>
+            <div class="reachMe">
+                <h2> I Might Be Introverted, But I Promise to Reply!</h2>
+                <p>We can connect at</p>
+            </div>
+
+            <div class="links">
+                <div class="contact">
+                    <div id="email" onclick="copyToClipboard()">
+                        <img src="./assets/media/img/Footer/Mail.png" alt="Mail Icon">
+                        <p>alwaysoli07@gmail.com</p>
+                    </div>
                 </div>
+
+
+                <div class="contact">
+                    <a href="https://www.linkedin.com/in/oli-durairaj/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/media/img/Footer/LinkedIn.png" alt="">
+                        <p>oli-durairaj</p>
+                    </a>
+                </div>
+
+                <div class="contact">
+                    <a href="https://www.instagram.com/alwaysoli._/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/media/img/Footer/Insta.png" alt="">
+                        <p>alwaysoli07._</p>
+                    </a>
+                </div>
+
+                <div class="contact">
+                    <a href="https://www.behance.net/oliarasan" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/media/img/Footer/Behnace.png" alt="">
+                        <p>oliarasan</p>
+                    </a>
+                </div>
+
             </div>
 
-
-            <div class="contact">
-                <a href="https://www.linkedin.com/in/oli-durairaj/" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/media/img/Footer/LinkedIn.png" alt="">
-                    <p>oli-durairaj</p>
-                </a>
+            <div class="tq">
+                <img src="./assets/media/img/Footer/ThankYou.png" alt="">
             </div>
 
-            <div class="contact">
-                <a href="https://www.instagram.com/alwaysoli._/" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/media/img/Footer/Insta.png" alt="">
-                    <p>alwaysoli07._</p>
-                </a>
-            </div>
-
-            <div class="contact">
-                <a href="https://www.behance.net/oliarasan" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/media/img/Footer/Behnace.png" alt="">
-                    <p>oliarasan</p>
-                </a>
-            </div>
-
-        </div>
-
-        <div class="tq">
-            <img src="./assets/media/img/Footer/ThankYou.png" alt="">
         </div>
 
     </section>

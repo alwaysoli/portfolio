@@ -21,6 +21,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 h1,
@@ -40,7 +41,7 @@ a {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     padding: 4px 24px;
 
@@ -53,12 +54,24 @@ header {
     transition: box-shadow 0.3s ease;
 
     border-bottom: #1c1c1c 2px solid;
+
+    width: 100%;
 }
 
 header.shadow {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Adds subtle shadow */
     border-bottom: none;
+}
+
+.nav1400 {
+    width: 1400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 24px;
 }
 
 .logoBox {
@@ -99,24 +112,37 @@ header.shadow {
     list-style: none;
 }
 
+.menu {
+    display: none;
+}
+
 /* Hero Section Css */
 .hero {
-    width: auto;
-
+    width: 100%;
     height: auto;
     overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+   
 
     text-align: center;
 
     margin: 20px 0 0 0;
     padding: 0px 24px 0px 24px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero1400 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
     position: relative;
+
+    width: 1400px;
 }
 
 .introDiv {
@@ -142,7 +168,6 @@ header.shadow {
 .profession {
     font-size: 80px;
     font-weight: 800;
-
 }
 
 .professionAssist {
@@ -163,20 +188,6 @@ header.shadow {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.myImgDiv img.hoverImage {
-    opacity: 0;
-    transform: scale(1.1);  /* Slight zoom on hover */
-}
-
-.myImgDiv:hover img.hoverImage {
-    opacity: 1;  /* Show hover image */
-    transform: scale(1);  /* Reset scale on hover */
-}
-
-.myImgDiv:hover img.defaultImage {
-    opacity: 0;
-    transform: scale(0.9);  /* Shrink the original image */
-}
 
 .lottie-animation {
     position: absolute;
@@ -197,18 +208,29 @@ header.shadow {
 
 
 /* Project Css */
+
 .projects {
     background: #ffffff;
     overflow: hidden;
     padding: 60px 24px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     border-top: 2px solid #1c1c1c;
     border-bottom: 2px solid #1c1c1c;
+
+    width: 100%;
+}
+
+.projects1400 {
+    width: 1400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .projects h2 {
@@ -379,102 +401,6 @@ header.shadow {
     height: 294px;
 }
 
-/* .projectsTitle,
-.projectShowcase {
-    width: 50%;
-}
-
-.projectsTitle p {
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
-    text-transform: capitalize;
-
-    width: 510px;
-}
-
-.projectList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #ffffff;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
-    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
-    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
-    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
-    -o-transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
-}
-
-.projectList:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-
-    cursor: pointer;
-}
-
-.projectDetail {
-    padding: 20px;
-
-    position: relative;
-}
-
-.projectDetail h2 {
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
-    text-transform: capitalize;
-
-    width: 280px
-}
-
-.projectDetail h3 {
-    color: #000;
-    opacity: 0.5;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.projectDetail h4 {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-
-    color: #E2E2E2;
-    font-size: 128px;
-    font-weight: 800;
-    line-height: 90px;
-    text-transform: uppercase;
-}
-
-.projectThumbnail img {
-    height: 100%;
-    width: auto;
-}
-
-.order1 {
-    order: 1
-}
-
-.order2 {
-    order: 2
-}
-
-.projectThumbnail img {
-    width: 100%;
-    height: auto;
-} */
-
-
 
 /* About CSS */
 .whoSection {
@@ -482,6 +408,16 @@ header.shadow {
     overflow: hidden;
 
     border-bottom: 2px solid #1c1c1c;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whoSection1400{
+    width: 1400px;
 }
 
 .aboutLeft,
@@ -494,13 +430,13 @@ header.shadow {
     flex-direction: column;
     gap: 40px;
 
-    padding-right: 14px;
+    padding-right: 24px;
 
     border-right: #1c1c1c solid 2px;
 }
 
 .aboutRight {
-    padding-left: 14px;
+    padding-left: 24px;
 }
 
 .who {
@@ -685,8 +621,18 @@ header.shadow {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     border-bottom: #1c1c1c 2px solid;
+
+    width: 100%;
+}
+
+.contact1400 {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .reachMe {
@@ -807,6 +753,8 @@ footer {
     line-height: normal;
 
     padding: 14px;
+
+    width: 100%;
 }
 
 footer p span {
@@ -815,4 +763,85 @@ footer p span {
     line-height: normal;
 
     padding: 0px 6px;
+}
+
+
+/* -------------------------------------------------------------- */
+
+/* Mobile CSS starts from here */
+@media only screen and (max-width: 768px) {
+
+    body {
+
+        font-weight: 16px;
+
+    }
+
+    /* Mobile Navigation Css */
+    .header {
+        width: 100%;
+    }
+
+    .logoBox {
+        width: 100px;
+    }
+
+    .menu {
+        display: block;
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .menu .material-symbols-rounded {
+        font-size: 30px;
+    }
+
+    .navList{
+        display: none;
+    }
+
+
+    /* Hero Mobile CSS */
+    .hero {
+        margin: 34px 0 0 0;
+
+        width: 100%;
+        height: 80vh;
+
+        padding: 0;
+    }
+
+    .introDiv {
+        height: 35%;
+    }
+
+    .introLine {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .profession {
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    .professionAssist {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .myImgDiv {
+        height: auto;
+        width: 100%;
+    }
+
+    .myImgDiv img {
+        width: auto;
+        height: 100%;
+    }
 }
