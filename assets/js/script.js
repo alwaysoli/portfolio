@@ -111,7 +111,7 @@ function resetTabColor() {
     Live.style.color = '#1c1c1c'
 }
 
-// Function to show all projects
+// Function to show and HIde all projects
 function HideAll() {
     GDproject.forEach(project => {
         project.style.display = 'none'; // Show only GD projects
@@ -208,17 +208,23 @@ function showLive() {
     Live.style.color = '#ffffff'
 }
 
-// Add event listeners to tabs
 AllProject.addEventListener('click', showAll);
 GD.addEventListener('click', showGD);
 UX.addEventListener('click', showUX);
 Live.addEventListener('click', showLive);
 
-// Initialize with all projects visible
 showAll();
 
-
-
+// JS for changing tab position
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', function () {
+      this.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+      });
+  });
+});
 
 
 
