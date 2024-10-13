@@ -30,7 +30,30 @@
 // changeProfession();
 
 
-// Hero Section Image change
+
+//JS for Mobile Navigation
+let menu = document.querySelector('.menu');
+let navList = document.querySelector('.navList');
+let navbox = document.querySelector('.nav1400');
+let closeIcon = document.querySelector('.close');
+
+function showNav() {
+  navList.style.display = 'flex';
+  menu.style.display = 'none';
+  navbox.style.flexDirection = 'column';
+  closeIcon.style.display = 'block';
+}
+
+function closeNav() {
+  navList.style.display = 'none';
+  menu.style.display = 'flex';
+  closeIcon.style.display = 'none';
+}
+
+menu.addEventListener('click', showNav);
+closeIcon.addEventListener('click', closeNav);
+
+//JS for Hero Section Image change
 const imgDiv = document.querySelector('.myImgDiv img');
 
 // Store your two image URLs for toggling

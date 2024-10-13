@@ -117,6 +117,10 @@ header.shadow {
     display: none;
 }
 
+.close {
+    display: none;
+}
+
 /* Hero Section Css */
 .container {
     width: 100%;
@@ -759,37 +763,52 @@ footer p span {
 @media only screen and (max-width: 768px) {
 
     body {
-
         font-weight: 16px;
-
     }
 
     /* Mobile Navigation Css */
-    .header {
-        width: 100%;
-    }
-
-    .logoBox {
-        width: 100px;
-    }
-
-    .menu {
-        display: block;
-        width: 44px;
-        height: 44px;
-
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-    }
-
-    .menu .material-symbols-rounded {
-        font-size: 30px;
+    header{
+        padding: 0px 16px;
     }
 
     .nav1400 {
-        padding: 0;
+        width: 100%;
+
+        padding: 14px 0%;
+    }
+
+    .logoBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .logoBox .logo {
+        width: 120px;
+    } 
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .menu img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .close {
+        display: none;
+        align-items: center;
+        justify-content: flex-end; 
+    }
+
+    .close img {
+        width: 44px;
+        height: 44px; 
     }
 
     .navList {
